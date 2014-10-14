@@ -1,24 +1,73 @@
+/*
+Matthew Darke
+Java Week 3
+term 1410
+
+ */
+
+
+
+
 package com.example.matthewdarke.javaweek3;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
+//import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.AdapterView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class MyActivity extends Activity {
+
+    Spinner giftSpinner;
+    ArrayAdapter<String>giftAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
+//set up spinner
+        giftSpinner = (Spinner) findViewById(R.id.giftsSpinner);
+
+//create an Array list using String
+        ArrayList<String>giftsList = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.spiritual_gifts_array)));
+
+// Create an ArrayAdapter using the string array and a default spinner layout
+
+        giftAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,giftsList);
+
+// Apply the adapter to the spinner
+        giftSpinner.setAdapter(giftAdapter);
 
     }
 
 
 
+    /*public class SpinnerActivity extends Activity implements OnItemSelectedListener {
 
+
+        public void onItemSelected(AdapterView<?> parent, View view,
+                                   int pos, long id) {
+            // An item was selected. You can retrieve the selected item using
+            parent.getItemAtPosition(pos);
+
+
+            Spinner spinner = (Spinner) findViewById(R.id.spinner);
+            spinner.setOnItemSelectedListener(this);
+
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // Another interface callback
+        }
+    }*/
 
 
 
