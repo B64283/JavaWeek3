@@ -2,17 +2,6 @@
 <resources>
 
     <string name="app_name">JavaWeek3</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string-array name="spiritual_gifts_array">
-        <item>Wisdom</item>
-        <item>Knowlede</item>
-        <item>Faith</item>
-        <item>healing</item>
-        <item>miracles</item>
-        <item>prophecy</item>
-        <item>Discerning of spirits</item>
-        <item>Speaking in tongues</item>
-        <item>Interpretation of different tongues</item>
-    </string-array>
+
+
 </resources>
