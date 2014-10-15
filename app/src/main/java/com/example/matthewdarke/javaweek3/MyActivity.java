@@ -57,7 +57,7 @@ public class MyActivity extends Activity {
 
 
 
-    //implement Ui elements
+    //implement Ui
         giftsListView = (ListView)findViewById(R.id.gifts_List);
         giftSpinner = (Spinner)findViewById(R.id.giftsSpinner);
         gSpinnerDetails = (TextView)findViewById(R.id.spinnerTextView);
