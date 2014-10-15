@@ -66,7 +66,7 @@ public class MyActivity extends Activity {
 
 
 
-    //call adapter method here
+
 
 
     }
